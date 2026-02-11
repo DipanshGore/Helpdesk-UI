@@ -34,9 +34,7 @@ export default function StatsCards() {
           <div>
             <p className="text-xs text-gray-500">{stat.title}</p>
             <h2 className="text-xl font-semibold mt-1">{stat.value}</h2>
-
           </div>
-
           <div className="text-indigo-600 text-3xl bg-indigo-50 p-3 rounded-lg">
             {stat.icon}
           </div>

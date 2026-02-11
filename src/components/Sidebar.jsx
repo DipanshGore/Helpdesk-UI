@@ -17,13 +17,10 @@ const menuItems = [
 export default function Sidebar() {
   return (
     <div className="h-screen w-64 bg-white border-r flex flex-col justify-between">
-      {/* Logo */}
       <div>
         <div className="p-6 text-2xl font-bold text-indigo-600">
           Helpdesk.
         </div>
-
-        {/* Menu */}
         <div className="mt-6 flex flex-col gap-2">
           {menuItems.map((item, index) => (
             <div
@@ -36,8 +33,6 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
-
-      {/* Profile */}
       <div className="p-6 border-t">
         <div className="flex items-center gap-3">
           <img

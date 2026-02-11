@@ -6,11 +6,9 @@ export default function TicketDetails({ ticket }) {
       </div>
     );
   }
-
   return (
     <div className="bg-white rounded-xl shadow-sm p-5 h-full">
       <h2 className="text-lg font-semibold mb-4">Ticket Details</h2>
-
       <div className="space-y-3 text-sm">
         <p><span className="font-semibold">Ticket ID:</span> {ticket.id}</p>
         <p><span className="font-semibold">Subject:</span> {ticket.subject}</p>
@@ -18,7 +16,6 @@ export default function TicketDetails({ ticket }) {
         <p><span className="font-semibold">Priority:</span> {ticket.priority}</p>
         <p><span className="font-semibold">Assignee:</span> {ticket.assignee}</p>
         <p><span className="font-semibold">Date:</span> {ticket.date}</p>
-
         <div className="mt-4">
           <p className="font-semibold mb-1">Description</p>
           <p className="text-gray-500">

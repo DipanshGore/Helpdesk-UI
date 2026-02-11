@@ -1,11 +1,10 @@
+
 import { FiSearch, FiBell } from "react-icons/fi";
 
 export default function Header() {
   return (
     <div className="w-full bg-white rounded-xl shadow-sm px-6 py-3 flex items-center justify-between">
-      {/* Left - Search */}
-      <div className="flex items-center bg-gray-100 px-4 py-2 rounded-lg w-105"
->
+      <div className="flex items-center bg-gray-100 px-4 py-2 rounded-lg w-105">
         <FiSearch className="text-gray-400 mr-2" />
         <input
           type="text"
@@ -13,8 +12,6 @@ export default function Header() {
           className="bg-transparent outline-none w-full text-sm"
         />
       </div>
-
-      {/* Right - Icons & Profile */}
       <div className="flex items-center gap-6">
         <div className="relative cursor-pointer">
           <FiBell className="text-xl text-gray-600" />
@@ -22,7 +19,6 @@ export default function Header() {
             3
           </span>
         </div>
-
         <img
           src="https://i.pravatar.cc/40"
           alt="profile"
