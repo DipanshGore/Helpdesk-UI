@@ -233,4 +233,4 @@ This project is open source under the MIT License, which basically means you can
 
 ---
 
-Built with ❤️ for support teams who deserve better tools. We hope this makes your work easier and your customers happier.
+Built for support teams who deserve better tools. We hope this makes your work easier and your customers happier.
