@@ -50,8 +50,6 @@ When you open the dashboard, you immediately see:
 - Right side: Detailed view of whichever ticket you've selected
 - Both areas work together seamlessly – click a row, see the details
 
-## What makes it special?
-
 ### Built with modern tools
 
 We didn't just slap this together with whatever was lying around. We chose our tech stack carefully:
@@ -125,22 +123,6 @@ Here's where things get fun. This project is designed to be customized, not just
 ### Adding or changing tickets
 
 Open up `src/data/tickets.js` and you'll find the sample ticket data. It's just a JavaScript array of objects. Add more tickets, remove ones you don't need, or change the structure entirely. When you're ready to pull real data, this is what you'll replace with API calls.
-
-### Connecting to your backend
-
-In `TicketTable.jsx`, you'll see where we import the static ticket data. Replace that import with a fetch call to your API:
-
-```javascript
-// Instead of this:
-import { tickets } from '../data/tickets.js';
-
-// Do this:
-useEffect(() => {
-  fetch('https://your-api.com/tickets')
-    .then(response => response.json())
-    .then(data => setTickets(data));
-}, []);
-```
 
 ### Adding new pages
 
@@ -234,3 +216,6 @@ This project is open source under the MIT License, which basically means you can
 ---
 
 Built for support teams who deserve better tools. We hope this makes your work easier and your customers happier.
+
+Author:-** Dipansh Gore**
+Passionate about creating functional user interfaces
