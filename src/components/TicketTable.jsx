@@ -16,20 +16,44 @@ const getStatusStyle = (status) => {
 export default function TicketTable({ onSelectTicket }) {
   return (
     <div className="bg-white rounded-xl shadow-sm p-4">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="text-md font-semibold">Recent Tickets</h2>
-        <button className="text-sm text-indigo-600 font-medium">View All</button>
+      
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <select className="border bg-gray-50 text-sm px-3 py-2 rounded-lg outline-none">
+            <option>All Tickets</option>
+            <option>Open</option>
+            <option>Pending</option>
+            <option>Closed</option>
+          </select>
+
+          <select className="border bg-gray-50 text-sm px-3 py-2 rounded-lg outline-none">
+            <option>Priority</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder="Search tickets..."
+            className="border bg-gray-50 text-sm px-3 py-2 rounded-lg outline-none w-64"
+          />
+        </div>
+
+        <button className="bg-indigo-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+          + New Ticket
+        </button>
       </div>
 
       <table className="w-full text-left border-separate border-spacing-y-2">
-        <thead>
-          <tr className="bg-gray-50 hover:bg-indigo-50 transition cursor-pointer text-sm">
-            <th className="py-3">Ticket ID</th>
-            <th>Subject</th>
-            <th>Status</th>
-            <th>Priority</th>
-            <th>Assignee</th>
-            <th>Date</th>
+        <thead className="bg-gray-50 text-gray-500 text-xs uppercase">
+          <tr>
+            <th className="py-3 px-3">Ticket ID</th>
+            <th className="px-3">Subject</th>
+            <th className="px-3">Status</th>
+            <th className="px-3">Priority</th>
+            <th className="px-3">Assignee</th>
+            <th className="px-3">Date</th>
           </tr>
         </thead>
 
@@ -38,11 +62,11 @@ export default function TicketTable({ onSelectTicket }) {
             <tr
               key={index}
               onClick={() => onSelectTicket(ticket)}
-              className="border-b hover:bg-gray-50 cursor-pointer transition"
+              className="bg-gray-50 hover:bg-indigo-50 transition cursor-pointer text-sm"
             >
               <td className="py-3 px-3 font-medium">{ticket.id}</td>
-              <td>{ticket.subject}</td>
-              <td>
+              <td className="py-3 px-3">{ticket.subject}</td>
+              <td className="py-3 px-3">
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusStyle(
                     ticket.status
@@ -51,9 +75,9 @@ export default function TicketTable({ onSelectTicket }) {
                   {ticket.status}
                 </span>
               </td>
-              <td>{ticket.priority}</td>
-              <td>{ticket.assignee}</td>
-              <td>{ticket.date}</td>
+              <td className="py-3 px-3">{ticket.priority}</td>
+              <td className="py-3 px-3">{ticket.assignee}</td>
+              <td className="py-3 px-3">{ticket.date}</td>
             </tr>
           ))}
         </tbody>
